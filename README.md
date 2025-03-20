@@ -34,25 +34,20 @@ This is an R Shiny app designed for exploring gene expression data. It allows us
    - The filtered data table is displayed below the plots.
 
 ## How to Run the App
-1. Clone this repository to your local machine:
+1. Clone this repository to your local machine - 
    ```bash
    git clone https://github.com/PriyankaItagi/Gene-Expression.git
 2. Open the app.R file in RStudio or your preferred R environment.
 
-3. Install the required R packages if you don't already have them:
-
-R
-Copy
+3. Install the required R packages if you don't already have them -
+  ```R
 install.packages("shiny")
 install.packages("ggplot2")
 install.packages("pheatmap")
 install.packages("DT")
-4. Run the app:
-
+```
+4. Run the app - 
 In RStudio, click the Run App button.
-
 Alternatively, run the following command in the R console:
-
-R
-Copy
+ ```R
 shiny::runApp("path/to/your/app.R")
