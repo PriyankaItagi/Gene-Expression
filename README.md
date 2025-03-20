@@ -41,13 +41,18 @@ This is an R Shiny app designed for exploring gene expression data. It allows us
 
 3. Install the required R packages if you don't already have them:
 
+R
+Copy
 install.packages("shiny")
 install.packages("ggplot2")
 install.packages("pheatmap")
 install.packages("DT")
-
 4. Run the app:
+
 In RStudio, click the Run App button.
+
 Alternatively, run the following command in the R console:
 
+R
+Copy
 shiny::runApp("path/to/your/app.R")
