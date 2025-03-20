@@ -50,4 +50,4 @@ install.packages("DT")
 In RStudio, click the Run App button.
 Alternatively, run the following command in the R console:
  ```R
-shiny::runApp("path/to/your/app.R")
+shiny::runApp("path/to/your/GeneExpression.R")
