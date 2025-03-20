@@ -10,7 +10,7 @@ This is an R Shiny app designed for exploring gene expression data. It allows us
 - **Interactive Table**: Display filtered data in a searchable table.
 
 ## How to Use
-1. Upload a Dataset - 
+1. **Upload a Dataset** - 
    - The app accepts CSV files with genes as rows and samples as columns.
    - Example dataset:
      ```csv
@@ -20,16 +20,16 @@ This is an R Shiny app designed for exploring gene expression data. It allows us
      Gene3,20,25,30
      ```
 
-2. Filter Genes - 
+2. **Filter Genes** - 
    - Use the slider to filter genes by average expression level.
 
-3. Select Samples - 
+3. **Select Samples** - 
    - Choose samples to include in the heatmap.
 
-4. Select a Gene - 
+5. **Select a Gene** - 
    - Choose a gene to visualize its expression across samples using a boxplot.
 
-5. View Outputs - 
+6. **View Outputs** - 
    - The heatmap and boxplot are displayed in the main panel.
    - The filtered data table is displayed below the plots.
 
