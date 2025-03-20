@@ -1,11 +1,10 @@
-install.packages("pheatmap")
-# Load necessary libraries
+# necessary libraries
 library(shiny)
 library(ggplot2)
 library(pheatmap)
 library(DT)
 
-# Define UI for application
+# UI 
 ui <- fluidPage(
   
   # Application title
@@ -51,7 +50,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic
+# server logic
 server <- function(input, output, session) {
   
   # Reactive expression to read the uploaded file
@@ -66,14 +65,14 @@ server <- function(input, output, session) {
     updateSelectInput(session, "gene_boxplot", choices = rownames(data()))
   })
   
-  # Output: Heatmap
+  # Heatmap
   output$heatmap <- renderPlot({
     req(input$samples)
     filtered_data <- data()[rowMeans(data()) >= input$expr_filter[1] & rowMeans(data()) <= input$expr_filter[2], input$samples]
     pheatmap(filtered_data, scale = "row", clustering_distance_rows = "euclidean")
   })
   
-  # Output: Boxplot
+  # Boxplot
   output$boxplot <- renderPlot({
     req(input$gene_boxplot)
     gene_data <- data()[input$gene_boxplot, ]
@@ -84,7 +83,7 @@ server <- function(input, output, session) {
       labs(title = paste("Expression of", input$gene_boxplot))
   })
   
-  # Output: Filtered data table
+  # Filtered data table
   output$filtered_table <- renderDT({
     req(input$expr_filter)
     filtered_data <- data()[rowMeans(data()) >= input$expr_filter[1] & rowMeans(data()) <= input$expr_filter[2], ]
